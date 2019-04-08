@@ -20,6 +20,8 @@ import {
   RefreshControl,
   Alert } from 'react-native';
 
+const url = 'http://18.221.183.124/blog/public/api/posts';
+
 export default class HomeScreen extends Component {
 
   static navigationOptions = {
@@ -32,7 +34,7 @@ export default class HomeScreen extends Component {
   }
 
   componentDidMount() {
-    return fetch('http://18.221.183.124/blog/public/api/posts')
+    return fetch(url)
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
@@ -50,7 +52,7 @@ export default class HomeScreen extends Component {
 
   onRefresh = () => {
     this.setState({ refreshing: true });
-    return fetch('http://18.221.183.124/blog/public/api/posts')
+    return fetch(url)
       .then((response) => response.json())
       .then((responseJson) => {
         this.setState({
