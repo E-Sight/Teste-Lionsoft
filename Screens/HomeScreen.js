@@ -186,6 +186,7 @@ const styles = StyleSheet.create({
    },
    footer_button_text: {
     fontSize: 12,
-    color: 'black'
+    color: 'black',
+    textAlign: 'center'
   },
 });
