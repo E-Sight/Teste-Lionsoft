@@ -125,7 +125,7 @@ export default class HomeScreen extends Component {
               />
             </TouchableOpacity>}
             // eslint-disable-next-line no-unused-vars
-            keyExtractor={({ id }, index) => id.toString()}
+            keyExtractor={({ id }) => id.toString()}
           />
         </ScrollView>
         <View style={styles.footer}>
